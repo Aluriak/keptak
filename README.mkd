@@ -1,0 +1,37 @@
+# Keptak
+Generation of shell script that allow to easily keep track of seen files.
+
+
+## Prerequisite
+Python 3.2+
+
+
+## Usage
+See documentation:
+
+    python keptak.py --help
+
+Or following example.
+
+### Example
+Play music files, sorted, using vlc:
+
+    python keptak.py --targets=*.wav,*.ogg,*.flac --player=vlc --makefile --sort
+    make
+
+Generate only the script for mkv and avi, sorted, using mplayer (default behavior):
+
+    python keptak.py
+
+
+## Interest
+Ultimately, here is the only things you need to do:
+
+- generate the script and the makefile (only the first time)
+- *make*
+- operate the files (e.g. watch the films)
+- in generated script, delete lines corresponding to seen files
+
+So, with very little maintenance cost, you are prevented
+from asking yourself *where did i stop last time ?*.
+Instead, you can just do *make*.
